@@ -1,5 +1,5 @@
 import React from 'react'
-import Team from '@/components/Admin/team/team'
+import Team from '@/components/Admin/Team/Team'
 
 function page() {
   return (
