@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { UserRole } from '@/types/types';
 import { AttendanceButton } from '../Common/Attendance/AttendanceButton';
 import { users } from '@/lib/auth';
+import { User } from '@/types/types';
 
 interface NavbarProps {
   role: UserRole;
@@ -13,14 +14,24 @@ interface NavbarProps {
   onToggleSidebar: () => void;
 }
 
-export function Navbar({ role, name, onToggleSidebar }: NavbarProps) {
+export function Navbar({ name, onToggleSidebar }: NavbarProps) {
   const [mounted, setMounted] = useState(false);
+  const [role, setRole] = useState('');
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user')
+    if (storedUser !== null) {
+      const userObject: User = JSON.parse(storedUser);
+      setRole(userObject.role)
+    }
+  }, [])
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+  }, []); 
 
   if (!mounted) return null;
+  const currentUser = users[0];
 
   return (
     <div className="border-b bg-white">
@@ -29,7 +40,7 @@ export function Navbar({ role, name, onToggleSidebar }: NavbarProps) {
           <Menu className="h-5 w-5" />
         </Button>
         <div className="ml-auto flex items-center gap-8 mr-4">
-          <AttendanceButton user={users} />
+          {role !== 'admin' && <AttendanceButton user={currentUser} />}
           {/* <div className="text-sm">
             <span className="text-muted-foreground">Logged in as: </span>
             <span className="font-medium capitalize">{role}</span>

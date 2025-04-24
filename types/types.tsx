@@ -1,13 +1,14 @@
 export type UserRole = "admin" | "manager" | "hr" | "finance" | "employee";
 
 export interface User {
+	id: string
+	name: string;
 	email: string;
 	password: string;
 	role: UserRole;
-	name: string;
 }
 
-export interface SidebarProps {
+export interface SidebarProps {	
 	role: UserRole;
 	collapsed: boolean;
 }

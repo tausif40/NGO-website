@@ -20,7 +20,7 @@ interface AttendanceRecord {
 }
 
 export function Attendance() {
-	// const { user } = AuthUser()
+	// const { user } = Authuser()
 	const router = useRouter();
 	const [user, setUser] = useState<User | null>(null);
 	const { toast } = useToast()

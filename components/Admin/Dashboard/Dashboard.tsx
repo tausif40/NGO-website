@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/utils/utils"
 
 import type React from "react"
 
@@ -77,7 +77,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        
+
 
         <Card>
           <CardHeader>

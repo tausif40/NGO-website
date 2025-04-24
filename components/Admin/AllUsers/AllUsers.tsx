@@ -155,7 +155,7 @@ export default function AllUsers() {
 												</span>
 												{/* <Badge variant={user.status === "Active" ? "active" : user.status === "Inactive" ? "destructive" : "secondary"}>
 													{user.status}
-												</Badge> */}	
+												</Badge> */}
 											</TableCell>
 											<TableCell className="text-right">
 												<DropdownMenu>

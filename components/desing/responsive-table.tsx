@@ -1,5 +1,5 @@
 import type React from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/utils/utils"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
 interface ResponsiveTableProps extends React.HTMLAttributes<HTMLDivElement> {

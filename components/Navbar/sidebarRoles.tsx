@@ -9,15 +9,19 @@ import {
 	Building2,
 	FolderKanban,
 	Briefcase,
+	PlusCircle,
+	PlusCircleIcon,
 } from 'lucide-react';
 
 export const roleBasedOptions = {
 	admin: [
 		{ name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
 		{ name: 'Employees', href: '/admin/team', icon: Users },
-		{ name: 'Recruitment', href: '/admin/projects', icon: Building2 },
-		{ name: 'All Projects', href: '/admin/all-projects', icon: FolderKanban },
 		{ name: 'All Users', href: '/admin/all-users', icon: Users },
+		{ name: 'Recruitment', href: '/admin/projects', icon: Building2 },
+		{ name: "Add Proposals", href: "/admin/add-proposals", icon: PlusCircleIcon, },
+		// { name: "Proposals", href: "/admin/proposals", icon: FolderKanban, },
+		{ name: 'All Projects', href: '/admin/all-projects', icon: FolderKanban },
 		{ name: 'Reports', href: '/admin/analytics', icon: FileText },
 		// { name: 'Settings', href: '/admin/settings', icon: Settings },
 	],

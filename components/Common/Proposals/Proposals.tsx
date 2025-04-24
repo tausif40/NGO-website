@@ -6,19 +6,22 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Briefcase, Plus, Search } from "lucide-react"
+import Link from "next/link"
 
-export default function AllProjects() {
+export default function Proposals() {
 
 	return (
 		<div className="space-y-6">
 			<div className="flex items-center justify-between">
 				<div>
-					<h1 className="text-3xl font-bold tracking-tight">Projects</h1>
-					<p className="text-muted-foreground">Manage and monitor all projects</p>
+					<h1 className="text-3xl font-bold tracking-tight">Proposals</h1>
+					<p className="text-muted-foreground">Manage and monitor all Proposals</p>
 				</div>
-				<Button>
-					<Plus className="mr-2 h-4 w-4" /> Create Project
-				</Button>
+				<Link href='/admin/add-proposals'>
+					<Button>
+						<Plus className="mr-2 h-4 w-4" /> Create Proposal
+					</Button>
+				</Link>
 			</div>
 
 			<div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
